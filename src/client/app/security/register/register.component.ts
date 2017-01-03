@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Config } from '../../shared/index';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -9,4 +10,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'register.component.html',
   styleUrls: ['register.component.css']
 })
-export class RegisterComponent { }
+export class RegisterComponent {
+  constructor() {
+    console.log('Environment config', Config);
+  }
+ }
