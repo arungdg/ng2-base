@@ -1,0 +1,26 @@
+<sd-navbar-logged></sd-navbar-logged>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <input [(ngModel)]="city" (keyup)="addCity(city, $event)" class="form-control" placeholder="Enter the location">
+            </div>
+            <p *ngIf="errorMessage" class="error"> {{errorMessage}}</p>
+            <ul *ngFor="let weather of weatherOfCities">
+                <li>
+                    <h3>{{ weather.city }}</h3>
+                </li>
+                <ul>
+                    <li><b>Weather:</b> {{ weather.main }}</li>
+                    <li><b>Description:</b> {{ weather.description }}</li>
+                    <li><b>Temperature:</b> {{ weather.temp + "&deg;C" }}</li>
+                    <li><b>Minimum temp:</b> {{ weather.min_temp + "&deg;C" }}</li>
+                    <li><b>Maximum temp:</b> {{ weather.max_temp + "&deg;C" }}</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h1> Google map</h1>
+        </div>
+    </div>
+</div>
