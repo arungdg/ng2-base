@@ -13,6 +13,7 @@ import { LoginModule } from './security/login/login.module';
 import { RegisterModule } from './security/register/register.module';
 import { ResetModule } from './security/reset/reset.module';
 import { WeatherModule } from './weather/weather.module';
+import { MapModule } from './map/map.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { WeatherModule } from './weather/weather.module';
     ResetModule, 
     RegisterModule, 
     SharedModule.forRoot(),
-    WeatherModule
+    WeatherModule,
+    MapModule
     ],
   declarations: [AppComponent],
   providers: [{
